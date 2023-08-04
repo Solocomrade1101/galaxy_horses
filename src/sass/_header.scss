@@ -264,7 +264,6 @@
   height: 200%;
   top: 30%;
   right: -60%;
-
 }
 .layer-5 {
   transform: translateZ(600px)  scale(.88);
@@ -272,15 +271,17 @@
   position: absolute;
   left: -60%;
   bottom: -40%;
-
 }
 .layer-6 {
   transform: translateZ(680px) scale(.88);
   animation: wave 10s 0.1s infinite linear;
   background-position-x: 148%;
   background-size: 120%;
-
-
+}
+@media (max-width:1400px){
+  .layer-6{
+    display: none;
+  }
 }
 .layer-3, .layer-5, .layer-6{
   pointer-events: none;
