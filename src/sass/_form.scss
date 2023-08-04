@@ -1,0 +1,274 @@
+@mixin text($fw, $fz, $lh){
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+.form {
+  position: relative;
+
+  margin-bottom: 43px;
+}
+.form__block {
+  max-width: 856px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.form__title {
+  position: relative;
+  margin-bottom: 12px;
+  &::before{
+    content: '';
+    display: block;
+    height: 83%;
+    left: 100%;
+    position: absolute;
+    top: -26px;
+    width: 10%;
+    background: url(./assets/img/star.svg) no-repeat;
+  }
+  
+  
+
+}
+.form__subtitle {
+  @include text(400, calc(var(--index)*0.8), 160%);
+  margin-bottom: 43px;
+
+}
+.form__input {
+  position: relative;
+  background: url(./assets/img/formFrame.png) no-repeat;
+  width: 100%;
+  padding: 22px;
+  background-size: 100.5% 103%;
+  background-position: -2px -2px;
+  margin-bottom: 42px;
+  width: 842px;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 13%;
+    left: 11%;
+    display: block;
+    width: 660px;
+    height: 322px;
+    border-radius: 660px;
+    opacity: 0.3400000035762787;
+    background: #4B7DFF;
+    filter: blur(150px);
+    z-index: -10;
+  }
+}
+.form__email {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  color: #141537;
+  @include text(400, 20px, 160%);
+  padding: 12px 32px;
+  padding-right: 210px;
+  ::placeholder{
+    color: #141537;
+  }
+  
+}
+.form__button {
+  position: absolute;
+  top: 20%;
+  left: 74%;
+    height: 61px;
+    width: 199px;
+    font-size: 20px;
+    
+}
+.button {
+}
+.form__text {
+  max-width: 660px;
+  text-align: center;
+  margin-bottom: 32px;
+  @include text(400, 18px, 160%);
+
+}
+.form__networks {
+  display: flex;
+  a:last-child{
+    margin-right: 0;
+  }
+}
+.form__link {
+  margin-right: 20px;
+  transition: all .3s ease;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+.form__blue-planet {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 137px;
+  background: url(./assets/img/formBluePlanet.svg);
+  top: -25%;
+    left: 13%;
+  &::before{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #0EDBFF;
+    filter: blur(50px);
+    opacity: .5;
+    z-index: -10;
+  }
+}
+.form__red-planet {
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url(./assets/img/formRedPlanet.svg);
+  top: 52%;
+  left: 6%;
+  &::before{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #FF9F84;
+    filter: blur(33px);
+    opacity: .8;
+    z-index: -10;
+    
+  }
+}
+.form__meteor {
+  position: absolute;
+  display: block;
+  width: 199px;
+  height: 140px;
+  background: url(./assets/img/formMeteor.svg);
+  top: 0%;
+    left: 80%;
+    z-index: -10;
+}
+.form__green-planet {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url(./assets/img/formGreenPlanet.svg);
+  top: 69%;
+    left: 80%;
+  &::before{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #BDFFE8;
+    filter: blur(50px);
+    opacity: .5;
+    z-index: -10;
+    
+  }
+}
+@media (max-width:1000px){
+  .form__meteor{
+    left: 78%;
+    top: -5%;
+  }
+  .form__red-planet{
+    top: 58%;
+  }
+  .form__subtitle{
+    font-size: 18px;
+  }
+}
+@media (max-width:850px){
+  .form__input{
+    width: 670px;
+  }
+  .form__button{
+    left: 68%;
+  }
+}
+.form__button-adaptive{
+  display: none;
+}
+@media (max-width:700px){
+  .form__button-adaptive{
+    display: flex;
+    height: 61px;
+    left: 88.5%;
+    position: absolute;
+    top: 20%;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+  .form__button{
+    display: none;
+  }
+  .form__input{
+    width: 335px;
+    background-position: 2px -6px;
+    background-size: 99.5% 114%;
+    margin-bottom: 42px;
+    padding: 15px;
+    &::before{
+      content: '';
+      width: 436px;
+      left: -15%;
+      top: -16%;
+      opacity: 0.54;
+    }
+  }
+  .form__email{
+    padding: 12px 60px 12px 13px;
+  }
+  .form__button-adaptive{
+    height: 59px;
+    justify-content: center;
+    left: 79%;
+    position: absolute;
+    top: 15%;
+  }
+  .form__block{
+    max-width: 90%;
+  }
+  .form__title{
+    text-align: center;
+    &::before{
+      height: 112%;
+      width: 18%;
+    }
+  }
+  .form__subtitle{
+    text-align: center;
+  }
+  .form__meteor{
+    display: none;
+  }
+  
+}
+@media (max-width:600px){
+  .form__red-planet{
+    display: none;
+  }
+}
+@media (max-width:500px){
+  .form__title::before{
+    content: '';
+    display: none;
+  }
+  .form__green-planet{
+    display: none;
+  }
+}

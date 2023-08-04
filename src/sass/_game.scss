@@ -1,0 +1,110 @@
+@mixin text($fw, $fz, $lh){
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+.game {
+  margin-bottom: calc(var(--index) * 8);
+}
+.content{
+  max-width: 90%;
+  margin: 0 auto;
+}
+.game__title-block {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: calc(var(--index) * 3);
+  svg{
+    width: calc(var(--index) * 5);
+    height: calc(var(--index) * 2.5);
+  }
+}
+.game__title {
+  margin: 0 calc(var(--index) * 1.2);
+
+}
+.game__features {
+
+}
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  perspective: 1500px;
+
+}
+.features__item {
+  width: 282px;
+  height: 384px;
+  background: #141537;
+  // border: 3px solid #3A3D9E;
+  border-radius: 16px;
+  position: relative;
+  transition-duration: 150ms;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  margin: 0 20px;
+  margin-bottom: 90px;
+
+  
+  cursor: pointer;
+  &:hover{
+  transform: translateZ(50px);
+  transform: scale3d(1.07, 1.07, 1.07);
+  }
+  &:hover::before{
+    opacity: 0.6;
+  
+
+  }
+  &::before{
+    content: "";
+    display: block;
+    height: 115%;
+    left: -18px;
+    position: absolute;
+    top: -29px;
+    width: 113%;
+    z-index: -1;
+    transition-timing-function: ease-out;
+  transition-duration: 300ms;
+
+    background: url(./assets/img/gameFrame.png) center center no-repeat;
+    background-size:  104% 99%;
+    z-index: -1;
+    
+  }
+}
+.features__content {
+  padding: 28px 20px;
+}
+.features__logo {
+  margin-bottom: 12px;
+}
+.features__title {
+  @include text(700, 36px, 120%);
+  font-family: "Good Timing";
+  margin-bottom: 24px;
+}
+.features__text {
+  @include text(400, 18px, 160%);
+
+}
+@media (max-width:600px){
+  .game__title-block{
+    svg{
+      display: none;
+    }
+  }
+  .game__title{
+    font-size: 42px;
+  }
+}
+@media (max-width:700px){
+  .features{
+    justify-content: center;
+  }
+}
