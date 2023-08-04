@@ -226,7 +226,6 @@ gsap.fromTo('.partners__block', {scale: 0, opacity:0},{
     start: 'top center',
     end: 'bottom center',
     scrub: true,
-    markers: true,
     
   }
 })

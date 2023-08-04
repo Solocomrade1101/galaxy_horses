@@ -58,4 +58,4 @@ for (let smoothLink of smoothLinks) {
     });
 };
 }
-console.log('efdf')
+

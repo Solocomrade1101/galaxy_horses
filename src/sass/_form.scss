@@ -112,6 +112,7 @@
   display: block;
   width: 120px;
   height: 137px;
+  z-index: -7;
   background: url(./assets/img/formBluePlanet.svg);
   top: -25%;
     left: 13%;
@@ -129,6 +130,7 @@
 }
 .form__red-planet {
   position: absolute;
+  z-index: -7;
   display: block;
   width: 80px;
   height: 80px;
@@ -150,6 +152,7 @@
 }
 .form__meteor {
   position: absolute;
+  z-index: -7;
   display: block;
   width: 199px;
   height: 140px;
@@ -160,6 +163,7 @@
 }
 .form__green-planet {
   position: absolute;
+  z-index: -7;
   display: block;
   width: 100px;
   height: 100px;
