@@ -27,6 +27,13 @@
 
 
 }
+@media (max-width:1430px){
+  .phases{
+    max-width: 950px;
+    margin: 0 auto;
+  }
+}
+
 .phases__content{
   max-width: 243px;
   margin: 0 auto;
@@ -55,7 +62,7 @@
 }
 .phases__title {
   font-family: "good timing";
-  @include text(700, calc(var(--index)* 1.5), 120%);
+  @include text(700, 36px, 120%);
   margin-bottom: 30px;
 }
 .phases__list {
@@ -68,7 +75,7 @@
   padding-left: 17px;
   
 }
-@media (max-width:700px){
+@media (max-width:704px){
   .roadmap__phases{
     justify-content: center;
   }

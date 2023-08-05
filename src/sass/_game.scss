@@ -36,30 +36,25 @@
   perspective: 1500px;
 
 }
+@media (max-width:1460px){
+  .features{
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+@media (max-width:716px){
+  .features{
+    justify-content: center;
+  }
+}
 .features__item {
   width: 282px;
   height: 384px;
   background: #141537;
-  // border: 3px solid #3A3D9E;
   border-radius: 16px;
   position: relative;
-  transition-duration: 150ms;
-  transition-property: transform;
-  transition-timing-function: ease-out;
   margin: 0 20px;
   margin-bottom: 90px;
-
-  
-  cursor: pointer;
-  &:hover{
-  transform: translateZ(50px);
-  transform: scale3d(1.07, 1.07, 1.07);
-  }
-  &:hover::before{
-    opacity: 0.6;
-  
-
-  }
   &::before{
     content: "";
     display: block;
@@ -69,9 +64,6 @@
     top: -29px;
     width: 113%;
     z-index: -1;
-    transition-timing-function: ease-out;
-  transition-duration: 300ms;
-
     background: url(./assets/img/gameFrame.png) center center no-repeat;
     background-size:  104% 99%;
     z-index: -1;

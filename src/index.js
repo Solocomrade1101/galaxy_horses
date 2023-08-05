@@ -53,7 +53,7 @@ for (let smoothLink of smoothLinks) {
 
         document.querySelector(id).scrollIntoView({
             behavior: "smooth",
-            block: "center"
+            block: "start"
         });
     });
 };

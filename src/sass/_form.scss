@@ -103,10 +103,22 @@
 .form__link {
   margin-right: 20px;
   transition: all .3s ease;
-  &:hover{
+  
+}
+@media (hover: hover){
+  .form__link{
+    &:hover{
     transform: scale(1.2);
   }
+  }
 }
+// @media (hover: none){
+//   .form__link{
+//     &:active{
+//     transform: scale(1.2);
+//   }
+//   }
+// }
 .form__blue-planet {
   position: absolute;
   display: block;
