@@ -134,9 +134,10 @@ if (ScrollTrigger.isTouch !== 1) {
         opacity: 1, y: 0,
         scrollTrigger: {
           trigger: '.game__title',
-          start: 'top center',
+          start: 'top bottom',
           // end: 'center center',
           scrub: true,
+          
         }
       })
     })
@@ -146,16 +147,17 @@ if (ScrollTrigger.isTouch !== 1) {
         opacity: 1, y: 0,
         scrollTrigger: {
           trigger: '.game__title',
-          start: 'top center',
+          start: 'top bottom',
           // end: 'center center',
           scrub: true,
+          
         }
       })
     })
   } else{
       let itemsL = gsap.utils.toArray('.features__item-left')
   itemsL.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: -70 }, {
+    gsap.fromTo(item, { opacity: 0, x: -170 }, {
       opacity: 1, x: 0,
       scrollTrigger: {
         trigger: item,
@@ -167,7 +169,7 @@ if (ScrollTrigger.isTouch !== 1) {
   })
   let itemsR = gsap.utils.toArray('.features__item-right')
   itemsR.forEach(item => {
-    gsap.fromTo(item, { opacity: 0, x: 70 }, {
+    gsap.fromTo(item, { opacity: 0, x: 170 }, {
       opacity: 1, x: 0,
       scrollTrigger: {
         trigger: item,
@@ -208,6 +210,58 @@ if (ScrollTrigger.isTouch !== 1) {
 
   // -----------------roadmap---------------
 
+
+  if (window.innerWidth > 1435) {
+    let itemsL = gsap.utils.toArray('.phases__item-left')
+    itemsL.forEach(item => {
+      gsap.fromTo(item, { opacity: 0, y: -70 }, {
+        opacity: 1, y: 0,
+        scrollTrigger: {
+          trigger: '.roadmap',
+          start: 'top bottom',
+          end: 'center center',
+          scrub: true,
+        }
+      })
+    })
+    let itemsR = gsap.utils.toArray('.phases__item-right')
+    itemsR.forEach(item => {
+      gsap.fromTo(item, { opacity: 0, y: 70 }, {
+        opacity: 1, y: 0,
+        scrollTrigger: {
+          trigger: '.roadmap',
+          start: 'top bottom',
+          end: 'center center',
+          scrub: true,
+        }
+      })
+    })
+  } else{
+      let itemsL = gsap.utils.toArray('.phases__item-left')
+  itemsL.forEach(item => {
+    gsap.fromTo(item, { opacity: 0, x: -170 }, {
+      opacity: 1, x: 0,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top bottom',
+        end: 'center center',
+        scrub: true,
+      }
+    })
+  })
+  let itemsR = gsap.utils.toArray('.phases__item-right')
+  itemsR.forEach(item => {
+    gsap.fromTo(item, { opacity: 0, x: 170 }, {
+      opacity: 1, x: 0,
+      scrollTrigger: {
+        trigger: item,
+        start: 'top bottom',
+        end: 'center center',
+        scrub: true,
+      }
+    })
+  })
+  }
 
 
   // -------------form ---------------------

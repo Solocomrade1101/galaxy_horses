@@ -13,10 +13,10 @@ margin-bottom: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: calc(var(--index)*2.41);
+  margin-left: 5%;
 }
 .instruction__description {
-  max-width: calc(var(--index)*28);
+  max-width: 640px;
 }
 .instruction__title {
   margin-bottom: 44px;
@@ -35,7 +35,7 @@ margin-bottom: 200px;
 
 }
 .instruction__item {
-  @include text(400, calc(var(--index) * 1), 120%);
+  @include text(400, 18px, 120%);
   a{
     color: #8CA4FF;
     text-decoration-line: underline;
