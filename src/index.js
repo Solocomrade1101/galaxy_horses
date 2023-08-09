@@ -43,6 +43,7 @@ const scrollAnimation = require('./js/scrollAnimation')
 const adaptive = require('./js/adaptive')
 const stars = require('./js/stars')
 const butter = require('../dist/butter')
+const preloader = require('./js/preloader')
 
 if (window.innerWidth <= 1000){
   const smoothLinks = document.querySelectorAll("a[href^='#']");

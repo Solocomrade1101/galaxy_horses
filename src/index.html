@@ -5,10 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galaxy_horses</title>
-
+  <link rel="preload" href="https://www.lorp.org/fonts/MuybridgeGX.woff2" as="font" />
+  <link rel="preload" href="./assets/goodTiming.ttf" as="font" />
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader__horse">🐎</div>
+      
+      <h1 class="loader__text">13%</h1>
+      
+    </div>
+  </div>
+
   <div class="adaptive">
     <div class="content">
       <div class="adaptive__header">
@@ -430,7 +440,7 @@
           <div class="instruction__illustration">
             <div class="welcome__blue-planet instruction__blue-planet"></div>
             <div class="instruction__horses">
-              <!-- <img src="./assets/instructionHorses.png" alt="horses"> -->
+              <div><img src="./assets/instructionHorses.png" alt="horses"></div>
             </div>
           </div>
         </div>
