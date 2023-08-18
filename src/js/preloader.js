@@ -14,14 +14,14 @@ for(let i = 0; i < images.length; i++){
 
 function image_loaded(){
   images_loaded_count++;
-  pers_display.innerHTML = (((100 / images.length) * images_loaded_count) << 0) + '%';
+
 
   if( images_loaded_count >= images.length){
     setTimeout(function(){
       if(!preloader.classList.contains('done')){
         preloader.classList.add('done');
       }
-    }, 2000);
+    }, 3000);
   }
 }
 

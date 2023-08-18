@@ -1,5 +1,4 @@
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/all";
+
 
 gsap.registerPlugin(ScrollTrigger)
 if (ScrollTrigger.isTouch !== 1) {
@@ -269,10 +268,8 @@ if (ScrollTrigger.isTouch !== 1) {
     opacity: 1, y: 0, x: 0, rotate: 0, scale: 1,
     scrollTrigger: {
       trigger: '.roadmap__phases',
-      start: 'top center',
+      start: 'top bottom',
       scrub: true,
-
-
     }
   })
 
@@ -283,16 +280,15 @@ if (ScrollTrigger.isTouch !== 1) {
       start: 'top center',
       scrub: true,
       end: 'bottom top'
-
     }
   })
 
   gsap.fromTo('.form__block', { scale: 0, opacity: 0 }, {
     scale: 1, opacity: 1,
     scrollTrigger: {
-      trigger: '.form__block',
-      start: 'top bottom ',
-      end: 'center center',
+      trigger: '.roadmap__phases',
+      start: 'top center ',
+      // end: 'center center',
       scrub: true,
 
 
@@ -325,10 +321,10 @@ if (ScrollTrigger.isTouch !== 1) {
     scale: 1, opacity: 1,
     scrollTrigger: {
       trigger: '.partners__title',
-      start: 'top center',
+      start: 'top bottom',
       end: 'bottom center',
       scrub: true,
-
+      markers: true,
     }
   })
 

@@ -18,7 +18,7 @@
 .header__container {
   height: 100vh;
   transform-style: preserve-3d;
-  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  
   will-change: transform;
   transition: transform  var(--transition);
   
@@ -32,7 +32,9 @@
 
 }
 .layer-1 {
+  
   transform: translateZ(-50px) scale(1.05) translateY(-40px);
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
 }
 @media (max-width:1200px){
   .layer-1{
