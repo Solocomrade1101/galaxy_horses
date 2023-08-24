@@ -324,7 +324,6 @@ if (ScrollTrigger.isTouch !== 1) {
       start: 'top bottom',
       end: 'bottom center',
       scrub: true,
-      markers: true,
     }
   })
 
